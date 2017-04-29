@@ -32,8 +32,8 @@ int main()
 
     unsigned int counter;
 
-    FILE *f = fopen("hashes.txt", "w");
-    
+    FILE *f = fopen("../hashes.txt", "w");
+
     printf("\nStarting at: %'llu\n", startingInt);
     printf("Finishing at: %'llu\n", tartgetInt);
     printf("------------------------------------------------------------------------------\n");
