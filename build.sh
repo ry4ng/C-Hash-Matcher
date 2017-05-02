@@ -1,8 +1,8 @@
 #!/bin/sh
 
 echo ""
-cd src
+# cd src
 echo "Building now..."
-gcc main.c sha256.c -w
+gcc src/main.c src/sha256.c -w
 echo "Complete."
 echo ""
