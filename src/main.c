@@ -1,3 +1,10 @@
+/*!
+ * C-Hash-Matcher <https://github.com/ryansmith98/C-Hash-Matcher>
+ *
+ * Copyright (c) 2017, Ryan Smith.
+ * Licensed under the MIT License.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -14,11 +21,11 @@ int main(int argc, char *argv[])
 
     // char targetHash[65] = "e401f2bd399f3456e5348217a7908ca545ea6d179f60f297a1b0133e87d2ff85"; //5,000
     // char targetHash[65] = "8990d5f8063b0f92bf863fa819cee92e93dd1630cb368e4f6959536a7165f2a9"; //94,010,302
-    char targetHash[65] = "8cd178e5738e3042f4ff9cf1f9c86d38980b50074066b4873ef126c6a2c6815a"; //REAL TARGET
+    char targetHash[65] = "c2eb7898bb6771503ffee5d0c722e5b561fe480edbc30141880a1cdf1e5b1cf6"; //REAL TARGET
 
     // MAX:                                         18,446,744,073,709,551,615
-    unsigned long long startingInt = 0; // 6,500,000,000
-    unsigned long long tartgetInt = 1000000; // 6,500,000,000
+    unsigned long long startingInt = 0;
+    unsigned long long tartgetInt = 1000000;
 
     unsigned long long counterInt = startingInt;
     unsigned char hexOfInt[32];
@@ -69,7 +76,15 @@ int main(int argc, char *argv[])
                     printf("%s\n", hexOfInt);
                     printf("%s\n", hashValue);
                 } else if (strcmp(argv[1], "log-count") == 0) {
-                    printf("%'llu\n", counterInt);
+                    // printf("%'llu\n", counterInt);
+                    if (printCounter > 1000000){
+                        if (clearCounter > 1000000){
+                            system("clear");
+                            // clearCounter = 0;
+                        }
+                        printf("%'llu\n", counterInt);
+                        printCounter = 0;
+                    }
                 } else if (strcmp(argv[1], "log-hex") == 0) {
                     printf("%s\n", hexOfInt);
                 } else if (strcmp(argv[1], "log-hash") == 0) {
