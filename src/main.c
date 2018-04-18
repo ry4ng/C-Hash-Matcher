@@ -19,9 +19,8 @@ int main(int argc, char *argv[])
     clock_t start = clock();
     setlocale(LC_NUMERIC, "");
 
-    // char targetHash[65] = "e401f2bd399f3456e5348217a7908ca545ea6d179f60f297a1b0133e87d2ff85"; //5,000
+     char targetHash[65] = "e401f2bd399f3456e5348217a7908ca545ea6d179f60f297a1b0133e87d2ff85"; //5,000
     // char targetHash[65] = "8990d5f8063b0f92bf863fa819cee92e93dd1630cb368e4f6959536a7165f2a9"; //94,010,302
-    char targetHash[65] = "c2eb7898bb6771503ffee5d0c722e5b561fe480edbc30141880a1cdf1e5b1cf6"; //REAL TARGET
 
     // MAX:                                         18,446,744,073,709,551,615
     unsigned long long startingInt = 0;
@@ -33,6 +32,12 @@ int main(int argc, char *argv[])
 
     int printCounter = 0;
     int clearCounter = 0;
+
+    // OVERRIDE DEFAULTS
+    if (argc > 1) {
+        strcpy(targetHash, argv[1]);
+        tartgetInt = strtol(argv[2], &argv[2], 10);
+    }
 
     FILE *f = fopen("hashes.txt", "w");
 
