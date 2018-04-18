@@ -3,15 +3,28 @@
 C-Hash-Matcher aims to find the matching hex value for a given hash, therefore finding out the
 unencrypted value of the hash.
 
-## How To Use - OSX
+## Usage guide - Mac & Linux
 
-Clone the repo by running ```git clone <repo url>```.
+Clone the repository
+```bash
+git clone https://github.com/ry4n98/C-Hash-Matcher
+```
 
-Navigate to the folder by running ```cd C-Hash-Matcher```.
+Navigate to the folder by running 
+```bash
+cd C-Hash-Matcher
+```
 
-Run the shell file ```sh build.sh``` to link and compile the source code.
+Run the shell file to link and compile the source code.
+```bash
+sh scripts/build.sh
+``` 
 
-If all goes well this will create a file ```a.out```. Then simply run ```./a.out [args]```.
+If all goes well this will create a file ```a.out```. Then simply run 
+
+```bash
+./a.out [args]
+```
 
 [GitHub Repo](https://github.com/ryansmith98/C-Hash-Matcher)
 

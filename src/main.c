@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 
     // MAX:                                         18,446,744,073,709,551,615
     unsigned long long startingInt = 0;
-    unsigned long long tartgetInt = 1000000;
+    unsigned long long tartgetInt = 10000000;
 
     unsigned long long counterInt = startingInt;
     unsigned char hexOfInt[32];
