@@ -124,6 +124,7 @@ int main(int argc, char *argv[])
     }
 
     clock_t finish = clock();
+    fprintf(f, "\n%'llu hashes checked in %'f seconds.\n\n", (tartgetInt - startingInt), (double)(finish - start) / CLOCKS_PER_SEC);
     printf("\n%'llu hashes checked in %'f seconds.\n\n", (tartgetInt - startingInt), (double)(finish - start) / CLOCKS_PER_SEC);
 
     return 0;

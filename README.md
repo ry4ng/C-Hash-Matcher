@@ -33,7 +33,7 @@ If all goes well this will create a file ```a.out```. Then simply run:
 ```
 
 Expected output:
-```bash
+```
 Starting at:  0
 Finishing at: 5,001
 ------------------------------------------------------------------------------
